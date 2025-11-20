@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\GameObject">
+      <UniqueIdentifier>{60b88c8f-0fae-4af4-ae4b-bd415de23544}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component">
+      <UniqueIdentifier>{e935ed69-6012-4034-917c-7921358a3dbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component\Rigidbody">
+      <UniqueIdentifier>{91d073eb-cd42-484d-92ac-9afb059ce6f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component\ModelRenderer">
+      <UniqueIdentifier>{4b09530f-092d-4264-85a8-971a00901a0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\ObjectManager">
+      <UniqueIdentifier>{0bb9a1ab-3e68-4724-afba-b78d9e743434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{7708e8bc-b325-4883-906d-ccb21d6e92df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\JsonLoader">
+      <UniqueIdentifier>{3cc19fdf-1d59-4661-98f3-090d9acd6197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Json">
+      <UniqueIdentifier>{7cf9d78c-a32a-45c1-89e8-6f38f55092b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component\Physics">
+      <UniqueIdentifier>{f1bfff3f-a4f2-49fc-864c-739af731e7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component\Transform">
+      <UniqueIdentifier>{eb127070-9375-4501-86a7-3c81ac728f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Player">
+      <UniqueIdentifier>{5273c3e9-8a88-425a-954f-98b0816c2f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene\SceneManager">
+      <UniqueIdentifier>{d5e0cd5d-d35d-4c29-93ec-b4a7183bad45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Scene\Game">
+      <UniqueIdentifier>{ef7de858-d145-4be1-aab0-cf9362bcc1e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Base">
+      <UniqueIdentifier>{445e79a6-e596-4f92-bc5c-aa134677f15b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Base\BaseChara">
+      <UniqueIdentifier>{14c0193d-b161-4d49-be9e-a25fc60a759d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Base\BaseScene">
+      <UniqueIdentifier>{f64100c9-04bd-48dd-99d9-a015ef8bbd7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Camera">
+      <UniqueIdentifier>{efa9ea95-e3d5-4bb1-8d09-843386c0b5a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component\Camera">
+      <UniqueIdentifier>{036e0652-7852-47fd-b505-5358e217cb4b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseComponent.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.hpp">
+      <Filter>ソース ファイル\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseChara.h">
+      <Filter>ソース ファイル\Base\BaseChara</Filter>
+    </ClInclude>
+    <ClInclude Include="RigidbodyComponent.h">
+      <Filter>ソース ファイル\Component\Rigidbody</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformComponent.h">
+      <Filter>ソース ファイル\Component\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelRendererComponent.h">
+      <Filter>ソース ファイル\Component\ModelRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>ソース ファイル\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonLoader.h">
+      <Filter>ソース ファイル\JsonLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonCharaComponent.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsComponent.h">
+      <Filter>ソース ファイル\Component\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseScene.h">
+      <Filter>ソース ファイル\Base\BaseScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>ソース ファイル\Scene\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>ソース ファイル\Scene\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>ソース ファイル\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraComponent.h">
+      <Filter>ソース ファイル\Component\Camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseChara.cpp">
+      <Filter>ソース ファイル\Base\BaseChara</Filter>
+    </ClCompile>
+    <ClCompile Include="RigidbodyComponent.cpp">
+      <Filter>ソース ファイル\Component\Rigidbody</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelRendererComponent.cpp">
+      <Filter>ソース ファイル\Component\ModelRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>ソース ファイル\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformComponent.cpp">
+      <Filter>ソース ファイル\Component\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonLoader.cpp">
+      <Filter>ソース ファイル\JsonLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicsComponent.cpp">
+      <Filter>ソース ファイル\Component\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseScene.cpp">
+      <Filter>ソース ファイル\Base\BaseScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>ソース ファイル\Scene\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>ソース ファイル\Scene\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>ソース ファイル\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraComponent.cpp">
+      <Filter>ソース ファイル\Component\Camera</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Json\player.Json">
+      <Filter>ヘッダー ファイル\Json</Filter>
+    </None>
+    <None Include="Json\camera.Json">
+      <Filter>ヘッダー ファイル\Json</Filter>
+    </None>
+  </ItemGroup>
+</Project>
