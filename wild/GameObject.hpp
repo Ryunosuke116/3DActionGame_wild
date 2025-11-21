@@ -9,7 +9,6 @@
 class GameObject : public std::enable_shared_from_this<GameObject>
 {
 public:
-
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
@@ -102,4 +101,5 @@ public:
 protected:
 	std::string m_name;
 	std::vector<std::shared_ptr<BaseComponent>> spComponentList;
+
 };
