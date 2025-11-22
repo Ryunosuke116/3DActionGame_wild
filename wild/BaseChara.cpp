@@ -7,9 +7,10 @@
 /// <summary>
 /// コンストラクタ
 /// </summary>
-BaseChara::BaseChara(const std::string& name)
+BaseChara::BaseChara(const std::string& name):
+	GameObject(name)
 {
-	m_name = name;
+	
 }
 
 /// <summary>

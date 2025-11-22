@@ -2,12 +2,13 @@
 #include "GameObject.hpp"
 #include "Camera.h"
 
-#include "TransformComponent.h"
+#include "CameraComponent.h"
 
 /// <summary>
 /// インストラクタ
 /// </summary>
-Camera::Camera()
+Camera::Camera():
+	GameObject("camera")
 {
 	// グラフィックの描画先を裏画面にセット
 	SetDrawScreen(DX_SCREEN_BACK);
@@ -29,7 +30,7 @@ Camera::~Camera()
 /// </summary>
 void Camera::CreateComponent()
 {
-	AddComponent<TransformComponent>();
+	AddComponent<CameraComponent>();
 }
 
 /// <summary>

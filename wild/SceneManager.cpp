@@ -21,6 +21,7 @@ void SceneManager::ChangeScene(const std::string_view name)
 		nowScene->ReleaseResource();
 		nowScene = scenes.at(name);
 		nowScene->Create();
+		nowScene->Load();
 		nowScene->Initialize();
 	}
 	catch (...)

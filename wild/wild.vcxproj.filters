@@ -67,6 +67,9 @@
     <Filter Include="ソース ファイル\Component\Camera">
       <UniqueIdentifier>{036e0652-7852-47fd-b505-5358e217cb4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\ComponentList">
+      <UniqueIdentifier>{9bd3414c-b2ca-4115-84a8-af15caf2d279}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseComponent.h">
@@ -120,6 +123,9 @@
     <ClInclude Include="CameraComponent.h">
       <Filter>ソース ファイル\Component\Camera</Filter>
     </ClInclude>
+    <ClInclude Include="ComponentList.h">
+      <Filter>ソース ファイル\ComponentList</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -163,6 +169,9 @@
     </ClCompile>
     <ClCompile Include="CameraComponent.cpp">
       <Filter>ソース ファイル\Component\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="ComponentList.cpp">
+      <Filter>ソース ファイル\ComponentList</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

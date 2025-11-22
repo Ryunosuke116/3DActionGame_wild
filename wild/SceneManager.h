@@ -16,8 +16,6 @@ public:
         if (nowScene == nullptr)
         {
             nowScene = scenes[name];
-            nowScene->Create();
-            nowScene->Initialize();
         }
     }
 

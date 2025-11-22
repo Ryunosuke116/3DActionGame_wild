@@ -13,6 +13,7 @@ public:
 
     virtual void ReleaseResource();
     virtual void Create();
+    virtual void Load();
     virtual void Initialize();
     virtual void Update();
     virtual void Draw();

@@ -1,5 +1,4 @@
 {
-  "initCenterPosition": [ 0.0, 10.0, 0.0 ],
-  "initCameraPosition": [ 0.0, 10.0, -10.0 ]
-  ""
+  "centerPosition": [ 0.0, 10.0, 0.0 ],
+  "cameraPosition": [ 0.0, 10.0, -10.0 ]
 }

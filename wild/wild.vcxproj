@@ -150,6 +150,7 @@
     <ClInclude Include="Common.h" />
     <ClInclude Include="BaseComponent.h" />
     <ClInclude Include="CommonCharaComponent.h" />
+    <ClInclude Include="ComponentList.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.hpp" />
     <ClInclude Include="JsonLoader.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="BaseScene.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
+    <ClCompile Include="ComponentList.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="JsonLoader.cpp" />
     <ClCompile Include="main.cpp" />

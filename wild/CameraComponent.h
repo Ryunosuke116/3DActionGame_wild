@@ -5,6 +5,7 @@
 class CameraComponent :
     public BaseComponent
 {
+public:
     CameraComponent();
     ~CameraComponent();
 
@@ -21,5 +22,7 @@ private:
     VECTOR m_lookPosition;
     VECTOR m_centerPosition;
     VECTOR m_cameraDirection;
+
+    static constexpr float kAddCenterPositionY = 14.0f;
 };
 

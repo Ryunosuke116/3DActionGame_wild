@@ -54,6 +54,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     sceneManager->Add<Game>("Game");
 
+    sceneManager->ChangeScene("Game");
+
     while (!ProcessMessage() && !ClearDrawScreen() && !CheckHitKey(KEY_INPUT_ESCAPE))
     {
         frameTime = GetNowHiPerformanceCount();

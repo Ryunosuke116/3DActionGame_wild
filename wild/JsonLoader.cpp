@@ -23,7 +23,7 @@ nlohmann::json JsonLoader::LoadFromFile(const char* path)
 	std::string patternPath = static_cast<std::string>(path) + ".Json";
 	std::regex pattern(patternPath);
 
-	for (const auto& entry : std::filesystem::directory_iterator(path))
+	for (const auto& entry : std::filesystem::directory_iterator(filePath))
 	{
 		if (std::regex_match(entry.path().filename().string(), pattern))
 		{

@@ -1,6 +1,7 @@
 #include "ObjectManager.h"
 #include "BaseChara.h"
 #include "Player.h"
+#include "Camera.h"
 
 ObjectManager::ObjectManager()
 {
@@ -15,6 +16,7 @@ ObjectManager::~ObjectManager()
 void ObjectManager::Create()
 {
 	m_objects.push_back(std::make_shared<Player>());
+	m_objects.push_back(std::make_shared<Camera>());
 
 	for (auto& spObject : m_objects)
 	{

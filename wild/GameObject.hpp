@@ -12,7 +12,10 @@ public:
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	GameObject() = default;
+	GameObject(const std::string& name)
+	{
+		m_name = name;
+	}
 
 	/// <summary>
 	/// コンポーネント生成
@@ -39,8 +42,10 @@ public:
 	/// 初期化
 	/// </summary>
 	/// <param name="data"></param>
-	virtual void Initialize(const nlohmann::json& data)
+	virtual void Initialize(const std::string& fileName)
 	{
+		nlohmann::json data = JsonLoader::GetInstance().LoadFromFile(fileName.c_str());
+
 		for (auto& spComponent : spComponentList)
 		{
 			spComponent->Initialize(data);
@@ -70,30 +75,33 @@ public:
 	}
 
 	//オブジェクトが持っているコンポーネントを追加
-	template<class T>
-	std::shared_ptr<T> AddComponent()
+	template<class typeName>
+	std::shared_ptr<typeName> AddComponent()
 	{
 		auto self = shared_from_this();
-		std::shared_ptr<T> spComponent = std::make_shared<T>();
-		spComponent->parent = self;
+		std::shared_ptr<typeName> spComponent = std::make_shared<typeName>();
+		spComponent->SetOwner(self);
 		spComponentList.push_back(spComponent);
 		return spComponent;
 	}
 
 	//オブジェクトが持っているコンポーネントを取得
-	template<class T>
-	std::weak_ptr<T> GetComponent()
+	template<class typeName>
+	std::weak_ptr<typeName> GetComponent()
 	{
 		for (auto& component : spComponentList)
 		{
-			std::shared_ptr<T> com = std::dynamic_pointer_cast<T>(component);
+			std::shared_ptr<typeName> com = std::dynamic_pointer_cast<typeName>(component);
 
 			if (com != nullptr)
 			{
 				return com;
 			}
 		}
-		return nullptr;
+
+		//取得失敗
+		std::shared_ptr<typeName> notComponent = nullptr;
+		return notComponent;
 	}
 
 	std::string GetName() const { return m_name; }

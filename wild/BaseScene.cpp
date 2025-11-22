@@ -34,6 +34,11 @@ void BaseScene::Create()
     objectManager->Create();
 }
 
+void BaseScene::Load()
+{
+    objectManager->Load();
+}
+
 /// <summary>
 /// ‰Šú‰»
 /// </summary>

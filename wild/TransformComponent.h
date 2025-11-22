@@ -7,6 +7,9 @@ public:
 	TransformComponent();
 	~TransformComponent();
 
+	void Load(const nlohmann::json& data)override;
+	void Initialize(const nlohmann::json& data)override;
+
 	VECTOR GetPosition()	const { return m_position; }
 	VECTOR GetRotation()	const { return m_rotation; }
 	VECTOR GetScale()		const { return m_scale; }
