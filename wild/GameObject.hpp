@@ -5,6 +5,8 @@
 #include "BaseComponent.h"
 #include "nlohmann/json.hpp"
 #include "JsonLoader.h"
+#include "ComponentList.hpp"
+#include "ComponentManager.hpp"
 
 class GameObject : public std::enable_shared_from_this<GameObject>
 {
@@ -75,7 +77,7 @@ public:
 	}
 
 	//オブジェクトが持っているコンポーネントを追加
-	template<class typeName>
+	/*template<class typeName>
 	std::shared_ptr<typeName> AddComponent()
 	{
 		auto self = shared_from_this();
@@ -83,25 +85,49 @@ public:
 		spComponent->SetOwner(self);
 		spComponentList.push_back(spComponent);
 		return spComponent;
-	}
+	}*/
+
+	//オブジェクトが持っているコンポーネントを取得
+	//template<class typeName>
+	//std::weak_ptr<typeName> GetComponent()
+	//{
+	//	for (auto& component : spComponentList)
+	//	{
+	//		std::shared_ptr<typeName> com = std::dynamic_pointer_cast<typeName>(component);
+
+	//		if (com != nullptr)
+	//		{
+	//			return com;
+	//		}
+	//	}
+
+	//	//取得失敗
+	//	std::shared_ptr<typeName> notComponent = nullptr;
+	//	return notComponent;
+	//}
 
 	//オブジェクトが持っているコンポーネントを取得
 	template<class typeName>
-	std::weak_ptr<typeName> GetComponent()
+	std::weak_ptr<typeName> AddComponent()
 	{
-		for (auto& component : spComponentList)
+		auto self = shared_from_this();
+		size_t type = ComponentList<typeName>::GetID();
+		std::weak_ptr<typeName> wpComponent = ComponentManager::GetInstance().AddComponent<typeName>();
+		
+		if (m_typeToComponentList.size() <= type)
 		{
-			std::shared_ptr<typeName> com = std::dynamic_pointer_cast<typeName>(component);
-
-			if (com != nullptr)
-			{
-				return com;
-			}
+			m_typeToComponentList.resize(type + 1, std::weak_ptr<std::any>());
 		}
 
-		//取得失敗
-		std::shared_ptr<typeName> notComponent = nullptr;
-		return notComponent;
+		m_typeToComponentList[type] = std::any(wpComponent);
+		wpComponent.lock()->SetOwner(self);
+		return wpComponent;
+	}
+
+	template<class typeName>
+	std::weak_ptr<typeName> GetComponent()
+	{
+		return std::any_cast<std::weak_ptr<typeName>>(m_typeToComponentList[ComponentList<typeName>::GetID()]);
 	}
 
 	std::string GetName() const { return m_name; }
@@ -109,5 +135,6 @@ public:
 protected:
 	std::string m_name;
 	std::vector<std::shared_ptr<BaseComponent>> spComponentList;
+	std::vector<std::any> m_typeToComponentList;
 
 };

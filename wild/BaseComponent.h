@@ -11,7 +11,7 @@ public:
 	BaseComponent() {}
 	virtual ~BaseComponent() {}
 
-	void SetOwner(std::shared_ptr<GameObject>& owner)
+	void SetOwner(std::weak_ptr<GameObject> owner)
 	{
 		m_owner = owner;
 	}

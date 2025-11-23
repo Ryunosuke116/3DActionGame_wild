@@ -70,6 +70,12 @@
     <Filter Include="ソース ファイル\ComponentList">
       <UniqueIdentifier>{9bd3414c-b2ca-4115-84a8-af15caf2d279}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\ComponentManager">
+      <UniqueIdentifier>{9dfaa63a-f7f2-4b91-8415-7239941040db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\IComponentList">
+      <UniqueIdentifier>{c777eca6-448b-414f-8723-21d726b6bf1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseComponent.h">
@@ -123,8 +129,14 @@
     <ClInclude Include="CameraComponent.h">
       <Filter>ソース ファイル\Component\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="ComponentList.h">
+    <ClInclude Include="ComponentList.hpp">
       <Filter>ソース ファイル\ComponentList</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentManager.hpp">
+      <Filter>ソース ファイル\ComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="IComponentList.h">
+      <Filter>ソース ファイル\IComponentList</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

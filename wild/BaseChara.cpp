@@ -27,6 +27,7 @@ BaseChara::~BaseChara()
 void BaseChara::CreateComponent()
 {
 	AddComponent<TransformComponent>();
+	AddComponent<TransformComponent>();
 	AddComponent<RigidbodyComponent>();
 	AddComponent<ModelRendererComponent>();
 }
