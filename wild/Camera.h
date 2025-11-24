@@ -10,9 +10,8 @@ public:
 
 	void CreateComponent()override;
 
-	void ChangeLookObject(std::shared_ptr<GameObject>& newLookObject);
-
 private:
 	std::weak_ptr<GameObject> lookObject;
+	std::weak_ptr<GameObject> centerObject;
 };
 

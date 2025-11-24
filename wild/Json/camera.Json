@@ -1,4 +1,6 @@
 {
   "centerPosition": [ 0.0, 10.0, 0.0 ],
-  "cameraPosition": [ 0.0, 10.0, -10.0 ]
+  "cameraPosition": [ 0.0, 20.0, -40.0 ],
+  "degree": -177.55,
+  "distance": 50.0
 }

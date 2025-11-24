@@ -22,9 +22,6 @@
     <Filter Include="ソース ファイル\Component\Rigidbody">
       <UniqueIdentifier>{91d073eb-cd42-484d-92ac-9afb059ce6f4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Component\ModelRenderer">
-      <UniqueIdentifier>{4b09530f-092d-4264-85a8-971a00901a0d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\ObjectManager">
       <UniqueIdentifier>{0bb9a1ab-3e68-4724-afba-b78d9e743434}</UniqueIdentifier>
     </Filter>
@@ -43,9 +40,6 @@
     <Filter Include="ソース ファイル\Component\Transform">
       <UniqueIdentifier>{eb127070-9375-4501-86a7-3c81ac728f76}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Player">
-      <UniqueIdentifier>{5273c3e9-8a88-425a-954f-98b0816c2f6e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Scene\SceneManager">
       <UniqueIdentifier>{d5e0cd5d-d35d-4c29-93ec-b4a7183bad45}</UniqueIdentifier>
     </Filter>
@@ -61,20 +55,23 @@
     <Filter Include="ソース ファイル\Base\BaseScene">
       <UniqueIdentifier>{f64100c9-04bd-48dd-99d9-a015ef8bbd7c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Camera">
-      <UniqueIdentifier>{efa9ea95-e3d5-4bb1-8d09-843386c0b5a4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\Component\Camera">
       <UniqueIdentifier>{036e0652-7852-47fd-b505-5358e217cb4b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\ComponentList">
-      <UniqueIdentifier>{9bd3414c-b2ca-4115-84a8-af15caf2d279}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Object">
+      <UniqueIdentifier>{ce24df69-5a1a-4eb7-84af-e2aad98cc89f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\ComponentManager">
-      <UniqueIdentifier>{9dfaa63a-f7f2-4b91-8415-7239941040db}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Object\Camera">
+      <UniqueIdentifier>{efa9ea95-e3d5-4bb1-8d09-843386c0b5a4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\IComponentList">
-      <UniqueIdentifier>{c777eca6-448b-414f-8723-21d726b6bf1f}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Object\Player">
+      <UniqueIdentifier>{5273c3e9-8a88-425a-954f-98b0816c2f6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Object\SkyDome">
+      <UniqueIdentifier>{27e61256-e441-4e2d-9c78-32c8c7948a39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Component\ModelRenderer">
+      <UniqueIdentifier>{4b09530f-092d-4264-85a8-971a00901a0d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -88,7 +85,7 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>ソース ファイル\Player</Filter>
+      <Filter>ソース ファイル\Object\Player</Filter>
     </ClInclude>
     <ClInclude Include="BaseChara.h">
       <Filter>ソース ファイル\Base\BaseChara</Filter>
@@ -124,19 +121,13 @@
       <Filter>ソース ファイル\Scene\SceneManager</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
-      <Filter>ソース ファイル\Camera</Filter>
+      <Filter>ソース ファイル\Object\Camera</Filter>
     </ClInclude>
     <ClInclude Include="CameraComponent.h">
       <Filter>ソース ファイル\Component\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="ComponentList.hpp">
-      <Filter>ソース ファイル\ComponentList</Filter>
-    </ClInclude>
-    <ClInclude Include="ComponentManager.hpp">
-      <Filter>ソース ファイル\ComponentManager</Filter>
-    </ClInclude>
-    <ClInclude Include="IComponentList.h">
-      <Filter>ソース ファイル\IComponentList</Filter>
+    <ClInclude Include="SkyDome.h">
+      <Filter>ソース ファイル\Object\SkyDome</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -144,7 +135,7 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>ソース ファイル\Player</Filter>
+      <Filter>ソース ファイル\Object\Player</Filter>
     </ClCompile>
     <ClCompile Include="BaseChara.cpp">
       <Filter>ソース ファイル\Base\BaseChara</Filter>
@@ -177,13 +168,13 @@
       <Filter>ソース ファイル\Scene\SceneManager</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp">
-      <Filter>ソース ファイル\Camera</Filter>
+      <Filter>ソース ファイル\Object\Camera</Filter>
     </ClCompile>
     <ClCompile Include="CameraComponent.cpp">
       <Filter>ソース ファイル\Component\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="ComponentList.cpp">
-      <Filter>ソース ファイル\ComponentList</Filter>
+    <ClCompile Include="SkyDome.cpp">
+      <Filter>ソース ファイル\Object\SkyDome</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +182,9 @@
       <Filter>ヘッダー ファイル\Json</Filter>
     </None>
     <None Include="Json\camera.Json">
+      <Filter>ヘッダー ファイル\Json</Filter>
+    </None>
+    <None Include="Json\skyDome.Json">
       <Filter>ヘッダー ファイル\Json</Filter>
     </None>
   </ItemGroup>

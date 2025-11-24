@@ -31,10 +31,6 @@ void ModelRendererComponent::Load(const nlohmann::json& data)
 {
 	std::string modelPath = data["modelPath"];
 	m_modelHandle = MV1LoadModel(modelPath.c_str());
-
-	MV1SetScale(m_modelHandle, VGet(data["scale"][0].get<float>(),
-		data["scale"][1].get<float>(),
-		data["scale"][2].get<float>()));
 }
 
 /// <summary>

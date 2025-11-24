@@ -2,6 +2,7 @@
 #include "BaseChara.h"
 #include "Player.h"
 #include "Camera.h"
+#include "SkyDome.h"
 
 ObjectManager::ObjectManager()
 {
@@ -17,6 +18,7 @@ void ObjectManager::Create()
 {
 	m_objects.push_back(std::make_shared<Player>());
 	m_objects.push_back(std::make_shared<Camera>());
+	m_objects.push_back(std::make_shared<SkyDome>());
 
 	for (auto& spObject : m_objects)
 	{
